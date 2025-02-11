@@ -6,15 +6,15 @@
 #    By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/10 16:31:36 by geonwkim          #+#    #+#              #
-#    Updated: 2025/02/11 17:48:38 by geonwkim         ###   ########.fr        #
+#    Updated: 2025/02/11 20:11:34 by geonwkim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = ex01
-SRCS = main.cpp Bureaucrat.cpp Form.cpp
+NAME = ex02
+SRCS = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 
@@ -27,6 +27,8 @@ $(NAME): $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
+	$(RM) *_shrubbery
+
 fclean:
 	$(RM) $(NAME)
 

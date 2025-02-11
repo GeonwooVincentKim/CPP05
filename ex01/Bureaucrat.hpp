@@ -29,7 +29,7 @@ class Bureaucrat
     public:
         // Constructors
         Bureaucrat();
-        Bureaucrat(const std::string &name, int grade);
+        Bureaucrat(const std::string name, int grade);
         Bureaucrat(const Bureaucrat &other);
         Bureaucrat &operator=(const Bureaucrat &other);
         ~Bureaucrat();

@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 19:15:07 by geonwkim          #+#    #+#             */
-/*   Updated: 2025/02/11 19:49:37 by geonwkim         ###   ########.fr       */
+/*   Updated: 2025/02/11 20:07:45 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45), _target("default target") {}
 
 // コンストラクタ
-RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
+RobotomyRequestForm::RobotomyRequestForm(const std::string target)
     : AForm("RobotomyRequestForm", 72, 45), _target(target) {}
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other)

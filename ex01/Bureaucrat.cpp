@@ -28,7 +28,7 @@ const char *Bureaucrat::GradeTooLowException::what() const throw()
 Bureaucrat::Bureaucrat() : _name("default"), _grade(150) {}
 
 // ユーザー定義コンストラクタ
-Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name)
+Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
 {
     if (grade < 1)
         throw GradeTooHighException();

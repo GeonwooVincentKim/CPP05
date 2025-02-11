@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 19:14:04 by geonwkim          #+#    #+#             */
-/*   Updated: 2025/02/11 19:45:40 by geonwkim         ###   ########.fr       */
+/*   Updated: 2025/02/11 19:59:56 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,13 @@ class RobotomyRequestForm : public AForm
 {
 private:
 	std::string _target; // 実行対象
-	virtual void performAction() const; // 具体的な処理をオーバーライド
 
+protected:
+	void performAction() const; // 具体的な処理をオーバーライド
 
 public:
 	RobotomyRequestForm();
-	RobotomyRequestForm(const std::string &target);
+	RobotomyRequestForm(const std::string target);
 	RobotomyRequestForm(const RobotomyRequestForm &other);
 	RobotomyRequestForm &operator=(const RobotomyRequestForm &other);
 	~RobotomyRequestForm();

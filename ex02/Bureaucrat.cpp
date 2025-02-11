@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
 
 // 例外メッセージの返却
 const char *Bureaucrat::GradeTooHighException::what() const throw()
@@ -59,7 +60,7 @@ int Bureaucrat::getGrade() const { return _grade; }
 // 等級の昇格（1になったら例外をスロー）
 void Bureaucrat::incrementGrade()
 {
-    if (_grade == 1)
+    if (_grade - 1 < 1)
         throw GradeTooHighException();
     _grade--;
 }
@@ -67,10 +68,41 @@ void Bureaucrat::incrementGrade()
 // 等級の降格（150になったら例外をスロー）
 void Bureaucrat::decrementGrade()
 {
-    if (_grade == 150)
+    if (_grade + 1 > 150)
         throw GradeTooLowException();
     _grade++;
 }
+
+// Bureaucrat が Form への署名を試みる
+void Bureaucrat::signForm(AForm &form)
+{
+    try
+    {
+        form.beSigned(*this); // フォームに署名を試みる
+        std::cout << _name << " signed " << form.getName() << std::endl;
+    }
+    catch (const std::exception &e)
+    {
+        std::cout << _name << " couldn't sign " << form.getName()
+                  << " because " << e.what() << std::endl;
+    }
+}
+
+// Bureaucrat が Form を実行する
+void Bureaucrat::executeForm(const AForm &form)
+{
+    try
+    {
+        form.execute(*this); // フォームを実行する
+        std::cout << _name << " executed " << form.getName() << std::endl;
+    }
+    catch (const std::exception &e)
+    {
+        std::cout << _name << " couldn't execute " << form.getName()
+                  << " because " << e.what() << std::endl;
+    }
+}
+
 
 // << 演算子オーバーロード（非メンバ関数）
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat)

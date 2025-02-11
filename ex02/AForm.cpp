@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 19:02:47 by geonwkim          #+#    #+#             */
-/*   Updated: 2025/02/11 19:26:41 by geonwkim         ###   ########.fr       */
+/*   Updated: 2025/02/11 19:59:17 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ const char *AForm::IsNotSignedException::what() const throw()
 // コンストラクタ
 AForm::AForm() : _name("default"), _is_signed(false), _sign_grade(1), _execute_grade(1) {}
 
-AForm::AForm(const std::string &name, int sign_grade, int execute_grade)
+AForm::AForm(const std::string name, int sign_grade, int execute_grade)
     : _name(name), _is_signed(false), _sign_grade(sign_grade), _execute_grade(execute_grade)
 {
     if (sign_grade < 1 || execute_grade < 1)

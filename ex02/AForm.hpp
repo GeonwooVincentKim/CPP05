@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 18:06:43 by geonwkim          #+#    #+#             */
-/*   Updated: 2025/02/11 19:25:50 by geonwkim         ###   ########.fr       */
+/*   Updated: 2025/02/11 19:59:22 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ public:
 
     // コンストラクタ & デストラクタ
     AForm();
-    AForm(const std::string &name, int signGrade, int executeGrade);
+    AForm(const std::string name, int signGrade, int executeGrade);
     AForm(const AForm &other);
     AForm &operator=(const AForm &other);
     virtual ~AForm();

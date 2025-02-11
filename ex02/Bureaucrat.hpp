@@ -13,8 +13,12 @@
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
 
-#include <iostream>
-#include <stdexcept>
+# include <iostream>
+# include <stdexcept>
+# include <string>
+# include "AForm.hpp"
+
+class AForm;
 
 class Bureaucrat
 {
@@ -37,6 +41,8 @@ class Bureaucrat
         // Member functions
         void incrementGrade();
         void decrementGrade();
+        void signForm(AForm &form);
+        void executeForm(const AForm &form);
 
         // Exceptions
         class GradeTooHighException : public std::exception

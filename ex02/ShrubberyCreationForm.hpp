@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 19:02:47 by geonwkim          #+#    #+#             */
-/*   Updated: 2025/02/11 19:27:29 by geonwkim         ###   ########.fr       */
+/*   Updated: 2025/02/11 20:00:05 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,16 @@ protected:
 
 public:
 	ShrubberyCreationForm();
-    ShrubberyCreationForm(const std::string &target);
+    ShrubberyCreationForm(const std::string target);
 	ShrubberyCreationForm(const ShrubberyCreationForm &other);
 	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
     ~ShrubberyCreationForm();
+
+	// exceptions
+	class OpenFileExeption: public std::exception
+	{
+		virtual const char* what() const throw();
+	};
 };
 
 #endif

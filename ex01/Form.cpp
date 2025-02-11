@@ -28,7 +28,7 @@ const char *Form::GradeTooLowException::what() const throw()
 Form::Form() : _name("default"), _isSigned(false), _signGrade(1), _executeGrade(1) {}
 
 // ユーザー定義コンストラクタ
-Form::Form(const std::string &name, int signGrade, int executeGrade)
+Form::Form(const std::string name, int signGrade, int executeGrade)
     : _name(name), _isSigned(false), _signGrade(signGrade), _executeGrade(executeGrade)
 {
     if (signGrade < 1 || executeGrade < 1)

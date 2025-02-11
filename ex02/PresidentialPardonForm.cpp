@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 19:18:08 by geonwkim          #+#    #+#             */
-/*   Updated: 2025/02/11 19:43:08 by geonwkim         ###   ########.fr       */
+/*   Updated: 2025/02/11 19:59:42 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", 25, 5) {}
 
 // コピーコンストラクタ
-PresidentialPardonForm::PresidentialPardonForm(const std::string &target)
+PresidentialPardonForm::PresidentialPardonForm(const std::string target)
 	: AForm("PresidentialPardonForm", 25, 5), _target(target) {}
 
 // コピーコンストラクタ
